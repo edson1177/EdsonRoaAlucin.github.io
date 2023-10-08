@@ -256,6 +256,7 @@ article.card:hover{
 .slider h3{
     margin-top: 10rem;
     font-size: 2rem;
+    text-wrap: balance;
 }
 .slider{
     text-align: center;
