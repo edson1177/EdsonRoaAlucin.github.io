@@ -1,0 +1,496 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Roboto';
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+
+body{
+    background-color: #fff;
+}
+
+a, li{
+    
+    color: #000;
+}
+
+.logoHeader img{
+    width: 100px;
+    cursor: pointer;
+    
+}
+
+header{
+    background-color: #fff;
+    display: flex;
+    
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 2rem;
+    font-size: 20px;
+    
+}
+
+
+.navMenu ul{
+    
+    display: flex;
+    align-items: center;
+    
+}
+.navMenu li{
+    margin-right: 1.5rem;
+    
+}
+
+.navMenu a:hover{
+    color: #ee5ca5
+}
+
+.navMenu li:last-child{
+    background-color: #ee5ca5;
+    border: 2px solid #ee5ca5;
+    padding: 0.25rem;
+    border-radius: 0.2rem;
+}
+
+.navMenu li:last-child:hover{
+    background: transparent;
+    border: 2px solid #ee5ca5;
+}
+
+/*-------------------------------*/
+
+.menu_icon img{
+    width: 50px;
+    height: 50px;
+    border-radius: 2px;
+    cursor: pointer;
+    
+}
+
+.menu_icon , #check{
+    display: none;
+}
+
+@media (max-width:768px){
+    .checkbtn{
+        display: block;
+    }
+   .menu_icon{
+    display: block;
+    /*position: fixed;*/
+    top: 20px;
+    right: 20px;
+   }
+
+   .navMenu ul{
+    display: block;
+    position: fixed;
+    top: 70px;
+    left: -100%;
+    background-color: #fff;
+    width: 100%;
+    height: 100vh;
+    right: 0;
+   }
+
+   .navMenu ul li{
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+   }
+
+   .navMenu ul li:last-child{
+    background: none;
+    padding: 1rem;
+   }
+
+   #check:checked ~ ul{
+    left: 0;
+    transition: all 0.25s;
+   }
+
+   .logoHeader img{
+    /*position: fixed;*/
+    width: 50px;
+   }
+
+   
+   
+    
+}
+
+
+
+
+/*------------------------------------------*/
+
+
+
+.section1{
+    background-image: url(ilya-pavlov-OqtafYT5kTw-unsplash.jpg);
+    height: 100vh;
+    display: flex;
+    background-color: rgb(50, 50, 50);
+    background-blend-mode: soft-light;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.wrap_texto{
+    margin: 50px auto;
+    width: max-content;
+    /*border-right: 3px solid;*/
+    color: #dcdcdc;
+    cursor: default;
+    font-size: 2rem;
+    font-style: italic;
+    animation: teclear 2s steps(35), efecto .5s step-end infinite alternate; 
+    
+}
+
+@keyframes teclear{
+    from{
+        clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+    }
+    to{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+}
+
+@keyframes efecto{
+    50%{
+        border-color: transparent;
+    }
+}
+
+
+
+.section2{
+    margin-top: 150px;
+    text-align: center;
+} 
+
+.section2 h2{
+    font-size: 2rem;
+}
+
+.section4{
+    align-items: center;
+    text-align: center;
+   
+}
+
+/*---------------------*/
+
+img{
+    max-width: 100%;
+}
+
+.texto_card{
+   text-align: left;
+   font-size: 13px;
+   font-style: italic;
+}
+
+article.card{
+    max-width: 400px;
+    background: #fff;
+    border-radius: 8px;
+    margin: 1rem;
+    box-shadow: 0px 1px 10px rgb(0, 0, 0, 0, 2);
+    cursor: default;
+    overflow: hidden;
+    transition: all 400ms ease;
+} 
+
+article.card:hover{
+    box-shadow: 0 0 20px black;
+    transform: translateY(-3%);
+}
+
+.header_card img{
+    border-radius: 8px 8px 0 0;
+    max-height: 200px;
+    height: 200px;
+    width: 100%;
+    /*margin: 1rem;
+    box-shadow: 0 0 20px black;
+    place-items: center; */
+    
+}
+
+.footer_card{
+    padding: 0 3rem;
+    
+}
+
+.card_wrap{
+    
+    display: grid;
+    gap: 1rem;
+    grid-auto-flow: dense;
+    grid-auto-rows: 22rem;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+}
+
+
+
+/*---------------------------carrucel de imagenes-logos de empresas*/
+.slider h3{
+    margin: 10rem;
+    font-size: 2rem;
+}
+.slider{
+    text-align: center;
+    width: 50%;
+    height: auto;
+    margin: auto;
+    overflow: hidden;
+    margin-top: 5rem;
+}
+
+.slider .slider-track{
+    margin: 5rem;
+    display: flex;
+    animation: scroll 15s linear infinite;
+    -webkit-animation: scroll 15s linear infinite;
+    width: calc(210px * 14);
+}
+
+.slider .slide{
+    width: 210px;
+}
+
+.slider .slide img{
+    width: 45%;
+}
+
+@keyframes scroll {
+    0%{
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+
+    100%{
+       -webkit-transform: translateX(calc(-210px * 7));
+       transform: translateX(calc(-210px * 7));
+    }
+}
+
+/*---------------------------*/
+
+footer{
+    margin-top: 15rem;
+    padding: 20px;
+    text-align: center;
+    background-color: #dcdcdc;
+    cursor: default;
+}
+
+
+/*------------------------Formulario*/
+
+.section4 h2{
+    font-size: 2rem;
+    margin: 10rem;
+}
+
+.container h3{
+    margin: 2rem;
+}
+
+.container {
+   
+    max-width: 35rem;
+    margin: 5rem auto;
+    padding: 20px;
+    display: flex;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    text-align: left;
+    
+}
+
+
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+textarea{
+    resize: none;
+}
+/*------------------------carrusel de imagenes*/
+
+.titulo{
+    font-size: 2rem;
+    text-align: center;
+    padding-top: 15rem;
+}
+
+.slider-box{
+    background-image: url(https://images.unsplash.com/photo-1695779539366-b221da6b9fcd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1933&q=80);
+    margin: 2rem auto 0;
+    overflow: hidden;
+    height: 100vh;
+    
+    background-color: rgb(50, 50, 50);
+    background-blend-mode: soft-light;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.slider-box ul{
+    display: flex;
+    padding: 0;
+    width: 400%;
+    animation: slide 50s infinite alternate ease-in-out;
+}
+
+.slider-box li{
+    width: 100%;
+    list-style: none;
+    position: relative;
+}
+
+.texto{
+    text-wrap: balance;
+    position: absolute;
+    text-align: center;
+    padding: 0 auto;
+    top: 10rem;
+    color: #fff;
+}
+.texto h2{
+    
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.texto p{
+    font-size: 1.5rem;
+    
+}
+
+/*--------------------------------*/
+
+.slider-box2{
+    background-image: url(https://images.unsplash.com/photo-1695779539366-b221da6b9fcd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1933&q=80);
+    margin: 2rem auto 0;
+    overflow: hidden;
+    height: 100vh;
+    
+    background-color: rgb(50, 50, 50);
+    background-blend-mode: soft-light;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    align-items: center;
+    justify-content: center;
+}
+.slider-box2 ul{
+    display: flex;
+    padding: 0;
+    width: 200%;
+    animation: slide2 25s infinite alternate ease-in-out;
+}
+
+.slider-box2 li{
+    width: 100%;
+    list-style: none;
+    position: relative;
+}
+/*------------------*/
+
+@keyframes slide {
+
+    0%{margin-left: 0;}
+    20%{margin-left: 0;}
+
+    25%{margin-left: -100%;}
+    45%{margin-left: -100%;}
+
+    50%{margin-left: -200%;}
+    70%{margin-left: -200%;}
+
+    75%{margin-left: -300%;}
+    100%{margin-left: -300%;}
+}
+
+@keyframes slide2 {
+
+   
+    75%{margin-right: -100%;}
+    100%{margin-inline-start: 0%;}
+
+    
+    50%{margin-left: -100%;}
+    25%{margin-inline-start: -0%;}
+
+    
+    0%{margin-inline-start: 0;}
+    20%{margin-inline-start: 0;}
+    
+}
+
+
+/*------------------------*/
