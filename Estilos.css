@@ -280,7 +280,7 @@ article.card:hover{
 }
 
 .slider .slide img{
-    width: 45%;
+    width: 100%;
 }
 
 @keyframes scroll {
